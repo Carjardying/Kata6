@@ -1,17 +1,21 @@
 function fizzbuzz(number) {
-  if (number % 3 == 0 && number % 5 == 0) {
-    console.log("Fizzbuzz");
-  } else if (number % 3 == 0) {
-    console.log("Fizz");
-  } else if (number % 5 == 0) {
-    console.log("Buzz");
+  let answer = [""];
+
+  for (let i = 1; i <= number; i++) {
+    if (number % 3 == 0 && number % 5 == 0) {
+      //toujours commecner par celui-ci!!! sinon ça ne focntionne pas
+      answer.push("Fizzbuzz");
+    } else if (number % 3 == 0) {
+      answer.push("Fizz");
+    } else if (number % 5 == 0) {
+      answer.push("Buzz");
+    } else {
+      answer.push(number);
+    }
   }
-
-  // else if(number%5==true){
-  //     console.log ==
-
-  // }
+  return answer;
 }
-fizzbuzz(3);
-fizzbuzz(5);
-fizzbuzz(15);
+console.log(fizzbuzz(3));
+console.log(fizzbuzz(5));
+console.log(fizzbuzz(15));
+
